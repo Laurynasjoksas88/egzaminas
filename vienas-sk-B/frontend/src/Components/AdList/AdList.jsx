@@ -45,7 +45,7 @@ const AdsList = () => {
   return (
     <Container fluid>
       <Title align="center" mb="lg">
-        All ads
+        ALL ADS
       </Title>
       <TextInput
         placeholder="Search"

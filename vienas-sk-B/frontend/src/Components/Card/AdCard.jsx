@@ -30,7 +30,7 @@ const AdCard = ({ ad, onBlock }) => {
         <Text fw={500}>
           <AiFillDollarCircle /> {ad.price} &#8364;
         </Text>
-        <Badge color="pink">{ad.category_id.name}</Badge>
+        <Badge color="#ff3377">{ad.category_id.name}</Badge>
       </Group>
 
       <Text size="sm" c="dimmed">

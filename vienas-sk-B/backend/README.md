@@ -280,17 +280,6 @@ Headers: Authorization: Bearer <your_jwt_token>
 
 # LOGINS FOR TESTING
 
-- Paprastas: defaultuser@gmail.com / default123
-- Adminas: adminuser@gmail.com / admin123
+- Paprastas: maiklas@gmail.com / maiklas
+- Adminas: laurynas@gmail.com / laurynas
 
-# CONTRIBUTORS 
-
-- KESTUTIS GIRDZIUNAS
-- KAROLIS LAPIENIS
-- LAURYNAS JOKŠAS
-- LAURYNAS ŠAPNAGIS
-- TAUTVYDAS KREIVYS
-
-# ACKNOWLEDGMENTS
-
-- Special thanks to EVELINA MARCINKEVICIENE for inspiration and guidance.

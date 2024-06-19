@@ -9,10 +9,9 @@ const {
   checkIfAdIsLikedByUser,
 } = require("../controllers/likeController");
 
-// middleware:
+
 const { verifyToken, checkAdminRole } = require("../Middleware/authMiddleware");
 
-// @ /api/likes/
 
 router.post("/ad/:id", verifyToken, createLike);
 router.delete("/ad/:id", verifyToken, deleteLikeByUserIdAndAdId);

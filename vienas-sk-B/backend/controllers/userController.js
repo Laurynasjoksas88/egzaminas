@@ -1,12 +1,11 @@
 /** @format */
 
-// userController.js
 const userService = require("../services/userService");
 const asyncHandler = require("express-async-handler");
 const jwt = require("jsonwebtoken");
-const User = require("../models/userModel"); // Add this line
+const User = require("../models/userModel");
 
-// user register
+
 const registerUser = asyncHandler(async (req, res) => {
   const { name, email, password } = req.body;
 
@@ -18,7 +17,6 @@ const registerUser = asyncHandler(async (req, res) => {
   }
 });
 
-// user login
 const loginUser = asyncHandler(async (req, res) => {
   const { email, password } = req.body;
 
@@ -35,7 +33,6 @@ const loginUser = asyncHandler(async (req, res) => {
   }
 });
 
-// user logout
 const logoutUser = asyncHandler(async (req, res) => {
   const userId = req.user._id;
 
@@ -47,7 +44,7 @@ const logoutUser = asyncHandler(async (req, res) => {
   }
 });
 
-// get user
+
 const getUser = asyncHandler(async (req, res) => {
   const userId = req.params.id;
 
@@ -59,7 +56,7 @@ const getUser = asyncHandler(async (req, res) => {
   }
 });
 
-// get users
+
 const getUsers = asyncHandler(async (req, res) => {
   try {
     const users = await userService.getUsers();
@@ -69,19 +66,17 @@ const getUsers = asyncHandler(async (req, res) => {
   }
 });
 
-// Block user
+
 const blockUser = asyncHandler(async (req, res) => {
   try {
     const userId = req.params.id;
     console.log(`Deleting user with ID: ${userId}`);
-    // Check if user exists in database
     const user = await User.findById(userId);
     if (!user) {
       console.log(`User not found: ${userId}`);
       return res.status(404).send({ error: "User not found" });
     }
     console.log(`Found user: ${user}`);
-    // Delete user from database
     await User.deleteOne({ _id: userId });
     console.log(`User deleted successfully: ${userId}`);
     res.status(200).send({ message: "User deleted successfully" });

@@ -1,6 +1,4 @@
 /** @format */
-
-// Import useEffect, useState, and fetch
 import React, { useEffect, useState } from "react";
 import AdCard from "../Card/AdCard";
 import { Container, Title, Divider, TextInput, Button } from "@mantine/core";

@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import classes from ".//LoginPage.module.css"
+
 import {
   TextInput,
   PasswordInput,
@@ -61,9 +63,10 @@ function LoginPage({ setUser }) {
     }
   };
 
-  return (
+  return ( 
+    
     <Container>
-      <Title mt={250}>Login</Title>
+      <Title mt={250}>LOGIN</Title>
       {error && <Text color="red">{error}</Text>}
       <Paper withBorder shadow="md" p={30} mt={30} radius="md">
         <form onSubmit={handleLogin}>

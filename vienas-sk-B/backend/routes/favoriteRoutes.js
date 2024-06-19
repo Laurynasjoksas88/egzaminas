@@ -9,10 +9,9 @@ const {
   checkIfAdIsFavoritedByUser,
 } = require("../controllers/favoriteController");
 
-// middleware:
+
 const { verifyToken, checkAdminRole } = require("../Middleware/authMiddleware");
 
-// @ /api/favorites/
 
 router.post("/ad/:id", verifyToken, createFavorite);
 router.delete("/ad/:id", verifyToken, deleteFavoriteByUserIdAndAdId);

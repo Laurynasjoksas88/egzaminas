@@ -50,7 +50,7 @@ function RegisterPage() {
 
   return (
     <Container>
-      <Title mt={250}>Register</Title>
+      <Title mt={250}>REGISTER</Title>
       {error && <Text color="red">{error}</Text>}
       <Paper withBorder shadow="md" p={30} mt={30} radius="md">
         <form onSubmit={handleRegister}>
